@@ -1,0 +1,22 @@
+{
+  "name": "learn-type-script-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build" : "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thespeace/learn-type-script-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thespeace/learn-type-script-starter/issues"
+  },
+  "homepage": "https://github.com/thespeace/learn-type-script-starter#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
