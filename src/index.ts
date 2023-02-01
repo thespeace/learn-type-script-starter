@@ -1,3 +1,6 @@
+import {init,exit} from "myPackage";
+import {push,pull} from "./myPackage2";
+
 const hello =()=> "hi";
 
 class Block {
@@ -7,8 +10,7 @@ class Block {
     }
 }
 
-import {init,exit} from "myPackage";
-import { pusha, pulla } from "myPackage2";
+
 
 init({
     url : "true"
@@ -18,3 +20,10 @@ exit(1)
 
 
 /* js파일을 불러오기 위해서는 tsconfig.json 파일에 allowJs:true 설정을 더해줘야 한다.*/
+
+/*
+push({
+    url : "true"
+})
+
+pull(1)*/
