@@ -9,21 +9,23 @@
     쉽게 말해서 코멘트로 이루어진 문법이다.
     함수위에 코멘트와 함께 해당 문법을 제대로 작성하면, 타입스크립트가 이 코멘트를 읽을 수 있다.
 */
-// @ts-check 해당 JSDoc 문법을 작성해주면 ts의 보호장치를 js파일에 걸 수있다!
+// @ts-check 해당 JSDoc 문법을 작성해주면 ts의 보호장치를 js파일에 걸 수있다! JavaScript 파일에서 오류를 활성화! 이러한 오류를 무시하고 싶다면 // @ts-ignore 또는 // @ts-expect-error를 추가하여 특정 줄의 오류를 무시할 수 있습니다.
 /**
  * "프로젝트를 초기화한다"
  * @param {object} commit //이 함수는 입력값을 받고
  * @param {boolean} commit.debug  //그리고 commit 객체 안에 boolean을 지정해주고,
  * @param {string} commit.url
- * @returns {boolean}//입력값의 데이터 타입은 객체가 될 것이다.
- *
+ * @returns boolean//입력값의 데이터 타입은 객체가 될 것이다.
  *
  */
-
-
 export function push(commit){
     return false;
 }
+
+/**
+ * @param {number} repo
+ * @returns {number}
+ */
 export function pull(repo){
     return repo + 1;
 }

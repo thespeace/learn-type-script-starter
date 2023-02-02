@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build" : "tsc"
+    "build": "tsc",
+    "dev" : "nodemon --exec ts-node src/index.ts",
+    "start": "node build/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/thespeace/learn-type-script-starter#readme",
   "devDependencies": {
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   }
 }
