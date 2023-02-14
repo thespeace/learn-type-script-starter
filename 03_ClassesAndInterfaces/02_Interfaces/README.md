@@ -189,3 +189,68 @@ class Sonar implements Pingable {
 ```
 
 https://www.typescriptlang.org/docs/handbook/2/classes.html#implements-clauses
+
+
+
+
+# Recap!!
+## Type Aliases VS interfaces
+
+Type Aliases과 인터페이스는 매우 유사하며 많은 경우 자유롭게 선택할 수 있습니다. 인터페이스의 거의 모든 기능은 type에서 사용할 수 있으며, 주요 차이점은 type을 다시 열어 새 속성을 추가할 수 없는 것입니다. 반면 인터페이스는 항상 확장 가능합니다.
+
+결론: 대부분의 경우 개인 취향에 따라 선택 가능 (인터페이스 사용을 조금 더 추천)
+
+```tsx
+type PlayerA = {
+    name : string
+}
+const playerA : PlayerA ={
+    name : "A"
+}
+//// type과 interface는 같은 목표를 가지고 있기때문에 똑같이 사용가능하다. 목표란? 오브젝트의 모양과 타입을 알려주는 것.
+interface PlayerB {
+    name : string
+}
+const playerB : PlayerB ={
+    name : "B"
+}
+
+//하지만 타입을 상속시키는 것에서 조금 다르다.
+type PlayerAA = PlayerA & {
+    lastName : string
+}
+const playerAA : PlayerAA ={
+    name : "A",
+    lastName : "AA"
+}
+////type과 다르게 interface에서는 PlayerBB가 정의 되어 있어도, 같은 이름으로 property를 정의가 가능하다.
+interface PlayerBB extends PlayerB {
+    lastName : string
+}
+interface PlayerBB {
+    health : string
+}
+const playerBB : PlayerBB = {
+    name : "B",
+    lastName : "BB",
+    health : "addBB"
+}
+
+//인터페이스와 타입 모두 추상 클래스로 대체해서 쓸 수 있다.
+type PlayerC = {
+    firstName : string
+}
+interface PlayerD {
+    firstName : string
+}
+class UserC implements PlayerC{
+    constructor(
+        public firstName : string
+    ) {}
+}
+class UserD implements PlayerD{
+    constructor(
+        public firstName : string
+    ) {}
+}
+```
